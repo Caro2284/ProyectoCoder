@@ -1,3 +1,235 @@
+/* Estilos generales para asegurar que todo es flexible */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive para la sección principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-section h2 {
+    font-size: 2rem;
+}
+
+.text-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsive para la sección de servicios */
+.services-grid {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services-grid h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive para el pie de página */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media queries para ajustar el diseño en diferentes pantallas */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-section p {
+        font-size: 0.95rem;
+    }
+
+    .services-grid h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .text-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .text-section p {
+        font-size: 0.9rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item p {
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        padding: 5px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin-bottom: 5px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Personaliza la barra de navegación */
+.custom-navbar {
+    background-color: #f8f9fa !important; /* Color de fondo claro */
+    font-family: 'Arial', sans-serif; /* Tipografía original */
+}
+
+/* Alineación de los enlaces a la derecha */
+.navbar-nav {
+    margin-left: auto;
+    padding-left: 0;
+}
+
+.ms-auto {
+    margin-left: auto !important; /* Alinea los enlaces a la derecha */
+}
+
+/* Enlaces en la barra de navegación */
+.custom-nav-link {
+    color: white !important; /* Color blanco para los enlaces */
+    font-family: 'Arial', sans-serif; /* Tipografía original */
+    text-align: left; /* Alineación a la izquierda dentro de la lista */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border: 2px solid white !important;
+    margin-left: auto;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    /* Asegura que el ícono sea completamente blanco */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: right;
+        padding-right: 1rem;
+    }
+    
+    .custom-navbar {
+        background: linear-gradient(to bottom, #0066cc, #003366) !important;
+    }
+}
+
+/* Cambio de color de texto al pasar el mouse */
+.custom-nav-link:hover {
+    color: #007bff !important; /* Cambia a un color azul distinto al del fondo */
+}
+
+/* Asegura que la barra de navegación se mantenga alineada correctamente en móviles */
+.navbar-nav {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Logo y contenedor */
+.logo-container {
+    text-align: left; /* Alinea todo a la izquierda */
+    padding-left: 20px; /* Ajusta el margen izquierdo */
+}
+
+.snowflake-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;
