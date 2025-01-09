@@ -7,10 +7,6 @@
     padding: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 /* Responsive para la sección principal */
 .main-content {
     display: flex;
@@ -69,28 +65,34 @@ body {
     font-size: 1rem;
 }
 
-/* Responsive para el pie de página */
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-}
-
 .footer-left,
-.footer-center,
 .footer-right {
     margin-bottom: 20px;
 }
 
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end; 
+}
+
 .social-icons a {
-    margin: 0 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Media queries para ajustar el diseño en diferentes pantallas */
@@ -116,46 +118,13 @@ body {
     }
 
     .footer-left,
-    .footer-center,
     .footer-right {
         margin-bottom: 10px;
     }
-}
 
-@media (max-width: 480px) {
-    .main-content {
-        padding: 10px;
-    }
-
-    .text-section h2 {
-        font-size: 1.6rem;
-    }
-
-    .text-section p {
-        font-size: 0.9rem;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-item p {
-        font-size: 0.9rem;
-    }
-
-    .footer-content {
-        padding: 5px;
-    }
-
-    .footer-left,
-    .footer-center,
-    .footer-right {
-        margin-bottom: 5px;
-    }
-
-    .social-icons img {
-        width: 25px;
-        height: 25px;
+    .social-icons a {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -363,12 +332,19 @@ footer {
     color: white;
     padding: 40px 0;
 }
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea todo a la derecha */
+    justify-content: flex-start;
+    text-align: right; /* Alinea el texto a la derecha */
+}
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: 40px;
     padding: 0 20px;
 }
@@ -384,20 +360,9 @@ footer {
     height: 30px;
 }
 
-.footer-center ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-center a {
-    color: white;
-    text-decoration: none;
-    line-height: 2;
-}
-
 .snow{
     margin-top: 20px;
+    margin-left: 100px;
 }
 
 .circle {
