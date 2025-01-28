@@ -4,10 +4,16 @@ $secondary-color: #003366;
 $text-color: #333;
 $light-bg: #f8f9fa;
 $white: #fff;
+$light-gray: #ccc;
+$dark-gray: #666;
 
 // Fuentes
 $font-family: 'Arial', sans-serif;
 
 // Tamaños
 $max-width: 1200px;
+
+// Breakpoints
+$breakpoint-lg: 991.98px;
+$breakpoint-md: 768px;
 

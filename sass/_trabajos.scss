@@ -1,8 +1,9 @@
 @use 'variables' as *;
-@use 'layout';
 
 .trabajos-page {
-    @extend .container;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .trabajos-grid {
@@ -27,7 +28,7 @@
     .etiqueta {
         margin: 0;
         font-size: 14px;
-        color: #666;
+        color: $dark-gray;
     }
 }
 

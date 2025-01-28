@@ -1,8 +1,23 @@
 @use 'variables' as *;
-@use 'layout';
 
 .nosotros-page {
-    @extend .container;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nosotros-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+        border-bottom: 2px solid $text-color;
+        padding-bottom: 5px;
+    }
 }
 
 .nosotros-content {
@@ -22,6 +37,91 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    h3 {
+        margin: 0;
+        font-size: 1.5em;
+        color: $secondary-color;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.8;
+        color: $dark-gray;
+        font-size: 1em;
+    }
+}
+
+.avatar-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $light-gray;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    h2 {
+        font-size: 1.5em;
+        color: $secondary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.8;
+        color: $dark-gray;
+        font-size: 1em;
+    }
+
+    ul {
+        margin-top: 10px;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        font-size: 1em;
+        margin: 5px 0;
+        color: $text-color;
+    }
+}
+
+.decorative-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.lines {
+    display: flex;
+    gap: 10px;
+
+    span {
+        width: 60px;
+        height: 2px;
+        background-color: $light-gray;
+    }
+}
+
+.circles {
+    display: flex;
+    gap: 10px;
+
+    span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $light-gray;
+    }
 }
 
 .mini-profile {
@@ -40,7 +140,7 @@
     height: 120px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #ddd;
+    background-color: $light-gray;
 }
 
 .mini-avatar {
@@ -65,33 +165,6 @@
         font-size: 0.9em;
         color: #777;
         margin-top: 5px;
-    }
-}
-
-.description {
-    h2 {
-        font-size: 1.5em;
-        color: $secondary-color;
-        margin-bottom: 10px;
-    }
-
-    p {
-        margin: 0;
-        line-height: 1.8;
-        color: #666;
-        font-size: 1em;
-    }
-
-    ul {
-        margin-top: 10px;
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        font-size: 1em;
-        margin: 5px 0;
-        color: $text-color;
     }
 }
 
