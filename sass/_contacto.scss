@@ -1,0 +1,79 @@
+@use 'variables' as *;
+@use 'layout';
+@use "sass:color";
+
+.contacto-page {
+    @extend .container;
+    flex: 1;
+}
+
+.contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.imagen-contacto {
+    img {
+        width: 80%;
+        height: auto;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.formulario-contacto {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+
+    &:hover {
+        background-color: color.scale($primary-color, $lightness: 10%);
+    }
+}
+
+.mapa-container {
+    margin-top: 40px;
+    width: 100%;
+
+    iframe {
+        width: 100%;
+        height: 350px;
+        border: none;
+        border-radius: 8px;
+    }
+}
+

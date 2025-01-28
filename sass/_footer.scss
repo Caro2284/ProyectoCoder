@@ -1,0 +1,91 @@
+@use 'variables' as *;
+@use 'layout';
+
+footer {
+    background-color: $primary-color;
+    color: $white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    @extend .container;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+    margin-bottom: 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: right; 
+}
+
+.snow {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    a {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.social-icon {
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 10px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+}
+

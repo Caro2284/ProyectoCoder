@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: right;
+        padding-right: 1rem;
+    }
+    
+    .custom-navbar {
+        background: linear-gradient(to bottom, $primary-color, $secondary-color) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-section {
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+        }
+    }
+
+    .services-grid h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        margin-bottom: 10px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+}
+

@@ -1,0 +1,61 @@
+@use 'variables' as *;
+@use 'layout';
+
+.servicios-page {
+    @extend .container;
+}
+
+.servicios-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.servicio-fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 190px;
+    flex-wrap: wrap;
+
+    &.reverso {
+        flex-direction: row-reverse;
+    }
+}
+
+.servicio-imagen {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+.servicio-texto {
+    text-align: center;
+    max-width: 500px;
+    background-color: rgb(252, 225, 216);
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        line-height: 1.8;
+        color: $text-color;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+}
+
