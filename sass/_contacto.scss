@@ -31,12 +31,16 @@
 }
 
 .imagen-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     img {
-        width: 80%;
+        width: 100%;
+        max-width: 500px;
         height: auto;
         border-radius: 8px;
-        margin: 0 auto;
-        display: block;
+        object-fit: cover;
     }
 }
 
@@ -45,19 +49,30 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     input,
     textarea {
-        padding: 10px;
+        width: 100%;
+        padding: 12px;
         border: 1px solid $light-gray;
         border-radius: 4px;
         font-size: 16px;
+        
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+        }
     }
 
     textarea {
@@ -67,7 +82,7 @@
 }
 
 input[type="submit"] {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: $primary-color;
     color: $white;
     border: none;
@@ -75,6 +90,7 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     align-self: flex-start;
+    transition: background-color 0.3s ease;
 
     &:hover {
         background-color: color.scale($primary-color, $lightness: -10%);
@@ -93,10 +109,66 @@ input[type="submit"] {
     }
 }
 
-.prueba {
-    margin: 0 auto;
-    padding: 20px;
-    flex: 1;
-    margin-left: 350px;
+// Media queries para responsive
+@media screen and (max-width: $breakpoint-md) {
+    .contacto-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .imagen-contacto {
+        order: -1; // Mueve la imagen arriba en móvil
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .formulario-contacto {
+        padding: 0 15px;
+        
+        form {
+            max-width: 100%;
+        }
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        align-self: center;
+    }
 }
+
+@media screen and (max-width: $breakpoint-sm) {
+    .contacto-header {
+        flex-direction: column;
+        text-align: center;
+        
+        h1 {
+            font-size: 2em;
+        }
+    }
+
+    .contacto-content {
+        gap: 20px;
+    }
+
+    .form-group {
+        input,
+        textarea {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .mapa-container {
+        margin-top: 30px;
+        
+        iframe {
+            height: 300px;
+        }
+    }
+}
+
+// Eliminamos la clase .prueba que no se está usando
 

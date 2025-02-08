@@ -8,27 +8,76 @@
 
 .trabajos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .trabajo-item {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     img {
         width: 100%;
-        height: 200px;
+        height: 250px;
         object-fit: cover;
-        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
 
     .etiqueta {
-        margin: 0;
+        margin: 8px 0;
         font-size: 14px;
         color: $dark-gray;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+// Media queries for responsive design
+@media screen and (max-width: $breakpoint-sm) {
+    .trabajos-page {
+        padding: 10px;
+    }
+
+    .trabajos-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .trabajo-item {
+        margin-bottom: 10px;
+        
+        img {
+            height: 200px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+    .trabajos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+    .trabajos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+    .trabajos-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 

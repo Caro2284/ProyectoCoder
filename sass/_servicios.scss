@@ -38,36 +38,32 @@
 
 .servicio-fila {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 190px;
-    flex-wrap: wrap;
+    gap: 40px;
 
-    &.reverso {
+    &:nth-child(even) {
         flex-direction: row-reverse;
     }
 }
 
 .servicio-imagen {
-    max-width: 350px;
+    flex: 1;
+    max-width: 500px;
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     img {
         width: 100%;
         height: auto;
         border-radius: 8px;
+        object-fit: cover;
     }
 }
 
 .servicio-texto {
-    text-align: center;
+    flex: 1;
     max-width: 500px;
     background-color: rgb(252, 225, 216);
-    width: 100%;
     padding: 20px;
     border-radius: 8px;
 
@@ -81,6 +77,61 @@
         color: $text-color;
         font-size: 1em;
         margin-bottom: 15px;
+    }
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: $breakpoint-lg) {
+    .servicio-fila {
+        flex-direction: column;
+        
+        &:nth-child(even) {
+            flex-direction: column;
+        }
+    }
+
+    .servicio-imagen,
+    .servicio-texto {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .servicios-header h1 {
+        font-size: 2em;
+    }
+
+    .servicio-texto {
+        h2 {
+            font-size: 1.3em;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    .servicios-page {
+        padding: 10px;
+    }
+
+    .servicios-header h1 {
+        font-size: 1.8em;
+        width: auto;
+    }
+
+    .servicio-texto {
+        padding: 15px;
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 0.85em;
+        }
     }
 }
 

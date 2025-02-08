@@ -1,40 +1,73 @@
 @use 'variables' as *;
 
-.services-grid {
+.main-content {
+    width: 100%;
     max-width: $max-width;
-    text-align: center;
-    padding: 40px 20px;
-    margin: 60px auto;
-
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-    }
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.grid-item {
-    text-align: center;
-
+.image-section {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    
     img {
         width: 100%;
-        max-width: 250px;
-        height: 250px;
-        object-fit: contain;
-        border: 2px solid $light-gray;
-        border-radius: 10px;
-        margin-bottom: 10px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: block;
     }
+}
 
+.text-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: $text-color;
+    }
+    
     p {
-        margin: 0;
-        font-size: 14px;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
         color: $text-color;
     }
 }
 
+@media (min-width: $breakpoint-md) {
+    .content-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .image-section {
+        width: 45%;
+        margin: 0;
+    }
+
+    .text-section {
+        width: 45%;
+        text-align: left;
+        padding: 0;
+    }
+}
+
+// Movemos los estilos de services-grid a su propio archivo

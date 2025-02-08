@@ -168,3 +168,34 @@
     }
 }
 
+.image-section{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .nosotros-content {
+        grid-template-columns: 1fr;
+    }
+
+    .image-section {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    .image-section {
+        display: none;
+    }
+}
+
